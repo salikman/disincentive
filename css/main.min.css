@@ -476,7 +476,7 @@ body {
   background: url("../img/intro-bg.jpg") top center no-repeat;
   background-size: cover;
   padding-top: 200px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 }
 
 .intro__title {
@@ -514,21 +514,6 @@ body {
 @media (max-width: 768px) {
   .intro {
     padding-top: 100px;
-  }
-  .intro__title {
-    margin: 0 auto;
-    text-align: center;
-  }
-  .intro__subtitle {
-    margin: 20px auto;
-    width: 365px;
-    text-align: center;
-  }
-  .intro__subtitle::before {
-    left: 20px;
-  }
-  .intro__button {
-    margin: auto;
   }
 }
 
