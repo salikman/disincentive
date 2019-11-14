@@ -1,0 +1,74 @@
+.feedback
+    background: url('../img/feedback-bg.jpg') center no-repeat
+    background-size: cover
+    &-wrap
+        display: flex
+        padding: 100px 0
+    &-text
+        padding-right: 60px
+        color: white
+    &__title
+        +bold
+        font-size: 30px
+    &__subtitle
+        display: block
+        margin-bottom: 50px
+        font-size: 20px
+    &__coupons
+        display: block
+        margin-bottom: 35px
+        font-size: 16px
+    &__amount
+        padding: 15px 25px
+        font-size: 30px
+        background-color: $yellow-color
+        color: black
+        border-radius: 50%
+    &-form
+        padding: 55px 50px
+        background-color: white
+        border-radius: 5px
+        .form
+            display: flex
+            flex-direction: column
+            &__title
+                margin: 0 0 30px
+                +bold
+                font-size: 26px
+                text-align: center
+            &__subtitle
+                +light
+                font-size: 16px
+            &__input
+                padding: 22px 18px
+                width: 330px
+                background-color: #E9E9E9
+                border: none
+                border-radius: 5px
+            &__input, &__button
+                margin-bottom: 16px
+            &__checkbox
+                display: none
+            &__checkbox:checked ~ .form__agreement::before  
+                content: '✓'
+                +bold
+            &__agreement
+                padding-left: 20px
+                position: relative
+                +light
+                font-size: 12px
+                text-align: center
+                &::before
+                    content: ''
+                    position: absolute
+                    left: 5px
+                    top: 0
+                    width: 15px
+                    height: 15px
+                    border-radius: 3px
+                    background-color: #E9E9E9
+                    color: $blue-color
+
+                
+
+                

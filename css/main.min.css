@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -341,6 +342,7 @@ template {
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
+  font-size: 16px;
   line-height: 1.5;
   color: #222;
 }
@@ -573,4 +575,113 @@ body {
   .advantage-block:nth-child(2) {
     margin-top: 20px;
   }
+}
+
+.feedback {
+  background: url("../img/feedback-bg.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.feedback-wrap {
+  display: flex;
+  padding: 100px 0;
+}
+
+.feedback-text {
+  padding-right: 60px;
+  color: white;
+}
+
+.feedback__title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.feedback__subtitle {
+  display: block;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.feedback__coupons {
+  display: block;
+  margin-bottom: 35px;
+  font-size: 16px;
+}
+
+.feedback__amount {
+  padding: 15px 25px;
+  font-size: 30px;
+  background-color: #FFD33C;
+  color: black;
+  border-radius: 50%;
+}
+
+.feedback-form {
+  padding: 55px 50px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.feedback-form .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form .form__title {
+  margin: 0 0 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  text-align: center;
+}
+
+.feedback-form .form__subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.feedback-form .form__input {
+  padding: 22px 18px;
+  width: 330px;
+  background-color: #E9E9E9;
+  border: none;
+  border-radius: 5px;
+}
+
+.feedback-form .form__input, .feedback-form .form__button {
+  margin-bottom: 16px;
+}
+
+.feedback-form .form__checkbox {
+  display: none;
+}
+
+.feedback-form .form__checkbox:checked ~ .form__agreement::before {
+  content: '✓';
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.feedback-form .form__agreement {
+  padding-left: 20px;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+}
+
+.feedback-form .form__agreement::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  background-color: #E9E9E9;
+  color: #009CFD;
 }
