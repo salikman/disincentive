@@ -7,6 +7,7 @@
         display: flex
         align-items: center
         justify-content: space-between
+        flex-wrap: wrap
         min-height: 80px
     &__mobile, &__landline
         text-align: right
@@ -37,3 +38,16 @@
             display: block
             font-size: 12px
             +light
+@media (max-width: 768px)
+    .navbar
+        &__mobile, &__landline
+            display: none
+@media (max-width: 445px)
+    .navbar
+        &-wrap
+            flex-direction: column
+            padding-top: 20px
+        &__logo
+            margin-bottom: 20px
+
+    
