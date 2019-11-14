@@ -1,0 +1,39 @@
+.navbar
+    position: absolute
+    width: 100%
+    left: 0
+    top: 0
+    &-wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+        min-height: 80px
+    &__mobile, &__landline
+        text-align: right
+    &__phone
+        display: block
+        font-size: 16px
+        +bold
+        text-decoration: none
+        color: $text-color
+    &__small-text
+        display: block
+        font-size: 12px
+        +light
+        text-decoration: none
+        color: $text-color
+.logo
+    display: flex
+    align-items: center       
+    &-wrap
+        display: flex
+        flex-direction: column
+        margin-left: 20px  
+        &__text
+            display: block
+            font-size: 18px
+            +bold
+        &__description
+            display: block
+            font-size: 12px
+            +light

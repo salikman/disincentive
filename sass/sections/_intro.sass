@@ -1,0 +1,25 @@
+.intro
+    background: url('../img/intro-bg.jpg') top center no-repeat
+    background-size: cover
+    padding-top: 200px
+    padding-bottom: 80px
+    &__title
+        width: 365px
+        +light
+        font-size: 36px
+    &__subtitle
+        display: block
+        padding-left: 33px
+        margin-bottom: 40px
+        position: relative
+        +medium
+        font-size: 18px
+        color: $blue-color
+        &:before
+            content: ''
+            position: absolute
+            left: 0
+            top: -2px
+            background: url('../img/checked.png') center no-repeat
+            width: 26px
+            height: 26px
