@@ -3,7 +3,7 @@
     background-size: cover
     &-wrap
         display: flex
-        padding: 100px 0
+        padding: 60px 0
     &-text
         padding-right: 60px
         color: white
@@ -26,8 +26,18 @@
         border-radius: 50%
     &-form
         padding: 55px 50px
+        position: relative
         background-color: white
         border-radius: 5px
+        &::after
+            content: ''
+            position: absolute
+            left: -380px
+            bottom: -94px
+            width: 419px
+            height: 322px
+            background: url('../img/feedback-img.png') center no-repeat
+            background-size: cover
         .form
             display: flex
             flex-direction: column
@@ -68,6 +78,29 @@
                     border-radius: 3px
                     background-color: #E9E9E9
                     color: $blue-color
+@media (max-width: 991px)
+    .feedback
+        &-form
+            &::after
+                display: none
+@media (max-width: 768px)
+    .feedback
+        &-wrap
+            flex-direction: column
+        &-text
+            margin-bottom: 40px
+            padding-right: 0
+        &-form
+            .form
+                &__input
+                    width: 100%
+@media (max-width: 500px)
+    .feedback
+        &-form
+            padding: 35px 30px
+    
+
+    
 
                 
 
