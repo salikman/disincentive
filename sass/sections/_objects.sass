@@ -1,0 +1,21 @@
+.objects
+    padding: 60px 0
+    background-color: $bg-color
+    &__title
+        padding: 0 30px
+        font-size: 30px
+        text-align: center
+    &-wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__item
+        margin-bottom: 40px
+        &:nth-child(7), &:nth-child(8), &:nth-child(9)
+            margin-bottom: 0
+        &--title
+            display: block
+            margin-top: 10px
+            +bold
+            font-size: 20px
+            text-align: center

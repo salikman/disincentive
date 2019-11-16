@@ -1,0 +1,35 @@
+.inaction
+    padding: 60px 0
+    background: url('../img/inaction-bg.jpg') no-repeat center / cover
+    &__title
+        padding: 0 30px
+        text-align: center
+    &-wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        padding-top: 30px
+    &__item
+        width: 285px
+        text-align: center
+        // &:nth-child(1), &:nth-child(2), &:nth-child(4), &:nth-child(5)
+        //     margin-right: 42px
+        &--title
+            margin: 20px 0 10px 0
+            font-size: 20px
+        &--description
+            +light
+@media (max-width: 664px)
+    .inaction
+        &__item
+            &:nth-child(1), &:nth-child(3), &:nth-child(5)
+                margin-right: 20px
+@media (max-width: 649px)
+    .inaction
+        &-wrap
+            justify-content: center
+        &__item
+            &:nth-child(1), &:nth-child(3), &:nth-child(5)
+                margin-right: 0
+    
+    

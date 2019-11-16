@@ -1,0 +1,62 @@
+.security
+    background-color: $bg-color
+    padding: 60px 0
+    &__title
+        margin-top: 0
+        padding: 0 30px
+        font-size: 30px
+        text-align: center
+    &__subtitle
+        display: block
+        padding: 0 30px
+        +light
+        font-size: 20px
+        text-align: center
+    &-wrap
+        display: flex
+        flex-direction: column
+    &-block
+        display: flex
+        align-items: center
+        margin-top: 60px
+        &:last-child
+            flex-direction: row-reverse
+    &__text
+        padding: 0 50px
+        &--title
+            margin-top: 0
+            font-size: 20px
+        &--desc
+            display: flex
+            align-items: center
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
+            +light
+            img
+                margin-right: 20px
+@media (max-width: 1024px)
+    .security
+        &-wrap
+            flex-direction: row
+            align-items: baseline
+            justify-content: space-around
+        &-block
+            width: 50%
+            &:last-child
+                flex-direction: row
+        &__text
+            padding: 0 20px        
+        &__img
+            display: none
+@media (max-width: 671px)
+    .security
+        &-wrap
+            flex-direction: column
+            align-items: center
+            justify-content: left
+        &-block
+            width: 100%
+        &__text
+            padding: 0   
+
