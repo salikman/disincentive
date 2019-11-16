@@ -1,0 +1,60 @@
+.actions
+    padding: 60px 0
+    background: url('../img/actions-bg.jpg') no-repeat center / cover
+    &__title
+        margin-top: 0
+        padding: 0 30px
+        font-size: 30px
+        text-align: center
+    &-wrap
+        display: flex
+        flex-wrap: wrap
+        position: relative
+        //overflow: hidden
+        &::after
+            content: ''
+            position: absolute
+            bottom: -60px
+            right: 0
+            background: url('../img/actions-img.png') no-repeat center / cover
+            width: 300px
+            height: 529px
+    &-block
+        width: 325px
+        padding-right: 50px
+        &__step
+            display: block
+            text-align: center
+            margin-top: 15px
+            padding: 3px 0
+            background-color: $blue-color
+            color: white
+            width: 80px
+            height: 30px
+            border-radius: 6px
+        &__title
+            font-size: 20px
+        &__desc
+            +light
+@media (max-width: 991px)
+    .actions
+        &-wrap
+            justify-content: center
+            &::after
+                display: none
+        &-block
+            &:nth-child(2), &:nth-child(4)
+                padding-right: 0
+@media (max-width: 709px)
+    .actions
+        &-block
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding-right: 0
+            width: 100%
+            &__title
+                margin-bottom: 0
+                
+    
+    

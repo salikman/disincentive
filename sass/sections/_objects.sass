@@ -2,6 +2,7 @@
     padding: 60px 0
     background-color: $bg-color
     &__title
+        margin-top: 0
         padding: 0 30px
         font-size: 30px
         text-align: center
@@ -19,3 +20,21 @@
             +bold
             font-size: 20px
             text-align: center
+@media (max-width: 992px)
+    .objects
+        &-wrap
+            justify-content: space-evenly
+        &__item
+            &:nth-child(7), &:nth-child(8)
+                margin-bottom: 40px
+@media (max-width: 767px)
+    .objects
+        &__item
+            padding: 0 5px
+@media (max-width: 679px)
+    .objects
+        &__item
+            margin-right: 0
+    
+    
+    
