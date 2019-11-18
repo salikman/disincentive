@@ -7,6 +7,10 @@
     <title>Disincentive</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
     <header class="header">
@@ -259,6 +263,82 @@
             </div>
         </section>
         <!-- /.actions -->
+        <section class="review">
+            <h2 class="review__title">Отзывы наших клиентов</h2>
+            <div class="container">
+
+                    <div class="your-class">
+                        <div>your content</div>
+                        <div>your content</div>
+                        <div>your content</div>
+                    </div>
+
+
+
+                <div class="review-wrap">
+                    <button class="prev">prev</button>
+                    <div class="review-slider">
+                        <div class="review-slider__item"><img src="img/review-1.png" alt=""></div>
+                        <div class="review-slider__item"><img src="img/review-2.png" alt=""></div>
+                        <div class="review-slider__item"><img src="img/review-3.png" alt=""></div>
+                        <div class="review-slider__item"><img src="img/review-1.png" alt=""></div>
+                        <div class="review-slider__item"><img src="img/review-2.png" alt=""></div>
+                        <div class="review-slider__item"><img src="img/review-3.png" alt=""></div>
+                    </div>
+                    <button class="next">prev</button>
+                </div>
+                <button class="button review__btn">Оставить заявку</button>
+            </div>
+        </section>
+        <!-- /.review -->
+        <section class="certifications">
+            <h2 class="certifications__title">Сертификаты и благодарности</h2>
+            <span class="certifications__subtitle">Наша компания аккредитована на работу центром гигиены и эпидемиологии</span>
+            <div class="container">
+                <div class="certifications-wrap">
+                    <div class="certifications__img"><img src="img/certifications-img.png" alt=""></div>
+                    <div class="certifications__img"><img src="img/certifications-img.png" alt=""></div>
+                    <div class="certifications__img"><img src="img/certifications-img.png" alt=""></div>
+                </div>
+            </div>
+        </section>
+        <!-- /.certifications -->
+        <section class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22161.61863166403!2d30.50906980464!3d50.454294132013295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1574069271958!5m2!1sru!2sua" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </section>
+        <!-- /.google-map -->
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrap">
+                <div class="footer-block txt-left">
+                    <div class="logo footer__logo">
+                        <img class="logo__img" src="img/logo.png" alt="Логотип Дезинсекцентр">
+                        <div class="logo-wrap">
+                            <strong class="logo-wrap__text">Дезинсекцентр</strong>
+                            <span class="logo-wrap__description">Уничтожение вредителей</span>
+                        </div>
+                    </div>
+                    <!-- /.footer-block__logo -->
+                    <address class="footer__address">Адрес: Украина, г. Киев, ул. Крещатик, дом 123<br>ОГРН: 80808080808080 ИНН: 10000000</address>
+                    <a href="#" class="footer__link">Политика обработки персональных данных</a>
+                </div>
+                <div class="footer-block txt-right">
+                    <span class="footer__txt">Остались вопросы?</span>
+                    <span class="footer__number">+38 (063) 123-45-67</span>
+                    <button class="button-o footer__btn">Перезвоните мне</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /.footer -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.your-class').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+        });
+    </script>
 </body>
 </html>

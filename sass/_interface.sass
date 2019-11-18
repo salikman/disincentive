@@ -3,9 +3,32 @@ body
     font-size: 16px
     line-height: 1.5
     color: $text-color
+
 a
     text-decoration: none
     color: $text-color
+
+.logo
+    display: flex
+    align-items: center       
+    &-wrap
+        display: flex
+        flex-direction: column
+        margin-left: 20px  
+        &__text
+            display: block
+            font-size: 18px
+            +bold
+        &__description
+            display: block
+            font-size: 12px
+            +light
+.txt-left
+    text-align: left
+
+.txt-right
+    text-align: right
+    
 .button-o
     border: 1px solid $blue-color
     border-radius: 5px
@@ -23,4 +46,29 @@ a
     border-bottom: 3px solid #FFA800
     border-radius: 5px
     cursor: pointer
+.prev, .next 
+    font-size: 16px
+    line-height: 0
+    position: absolute
+    top: 50%
+    display: block
+    width: 20px
+    height: 20px
+    padding: 0
+    transform: translate(0, -50%)
+    cursor: pointer
+    color: black
+    border: none
+    outline: none
+    background: red
+.prev:before, .next:before 
+    +light
+    font-size: 20px
+    line-height: 1
+    opacity: .75
+    color: white
+.prev:before
+    content: '←'
+.next:before
+    content: '2'
     
