@@ -8,9 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    
 </head>
 <body>
     <header class="header">
@@ -35,7 +36,7 @@
                         <a href="mailto:info@gmail.com" class="navbar__small-text">info@gmail.com</a>
                     </div>
                     <!-- /.navbar__landline -->
-                    <button class="button-o navbar__button">Заказать звонок</button>
+                    <button class="button-o navbar__button popup-btn">Заказать звонок</button>
                 </div>
             </div>
             <!-- /.container -->
@@ -46,7 +47,7 @@
         <div class="container">
             <h1 class="intro__title">За 1 час избавим вас от всех насекомыхс гарантией 1 год или вернем деньги</h1>
             <span class="intro__subtitle">Безопасно для детей и животных</span>
-            <button class="button intro__button">Оставить заявку</button>
+            <button class="button intro__button popup-btn">Оставить заявку</button>
         </div>
     </div>
     <!-- /.intro -->
@@ -190,7 +191,7 @@
                     </div>
                     <!-- /.feedback-text -->
                     <div class="feedback-form">
-                        <form action="/">
+                        <form action="#">
                             <div class="form">
                                 <h4 class="form__title">Заполните форму,<br>
                                     <span class="form__subtitle">чтобы получить скидку и консультацию</span>
@@ -266,28 +267,29 @@
         <section class="review">
             <h2 class="review__title">Отзывы наших клиентов</h2>
             <div class="container">
-
-                    <div class="your-class">
-                        <div>your content</div>
-                        <div>your content</div>
-                        <div>your content</div>
-                    </div>
-
-
-
                 <div class="review-wrap">
-                    <button class="prev">prev</button>
                     <div class="review-slider">
-                        <div class="review-slider__item"><img src="img/review-1.png" alt=""></div>
-                        <div class="review-slider__item"><img src="img/review-2.png" alt=""></div>
-                        <div class="review-slider__item"><img src="img/review-3.png" alt=""></div>
-                        <div class="review-slider__item"><img src="img/review-1.png" alt=""></div>
-                        <div class="review-slider__item"><img src="img/review-2.png" alt=""></div>
-                        <div class="review-slider__item"><img src="img/review-3.png" alt=""></div>
+                        <div class="review-slide__item" style="margin-right: 15px !important">
+                            <img src="img/review-1.png" alt="">
+                        </div>
+                        <div class="review-slide__item" style="margin-right: 15px !important">
+                            <img src="img/review-2.png" alt="">
+                        </div>
+                        <div class="review-slide__item" style="margin-right: 15px !important">
+                            <img src="img/review-3.png" alt="">
+                        </div>
+                        <div class="review-slide__item" style="margin-right: 15px !important">
+                            <img src="img/review-1.png" alt="">
+                        </div>
+                        <div class="review-slide__item" style="margin-right: 15px !important">
+                            <img src="img/review-2.png" alt="">
+                        </div>
+                        <div class="review-slide__item" style="margin-right: 15px !important">
+                            <img src="img/review-3.png" alt="">
+                        </div>
                     </div>
-                    <button class="next">prev</button>
                 </div>
-                <button class="button review__btn">Оставить заявку</button>
+                <button class="button review__btn popup-btn">Оставить заявку</button>
             </div>
         </section>
         <!-- /.review -->
@@ -332,12 +334,42 @@
         </div>
     </footer>
     <!-- /.footer -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <!-- Модальное окно -->
+    <div class="popup">
+        <div class="popup-dialog">
+            <div class="popup-content">
+                <div class="popup-close">&times;</div>
+                <div class="feedback-form">
+                    <form action="/">
+                        <div class="form">
+                            <h4 class="form__title">Заполните форму,<br>
+                                <span class="form__subtitle">чтобы получить скидку и консультацию</span>
+                            </h4>
+                            <input type="text" class="form__input" placeholder="Ваше имя*">
+                            <input type="phone" class="form__input form__phone" placeholder="Ваш телефон*">
+                            <button class="form__button button">Оставить заякву</button>
+                            <input name="a2" type="checkbox" id="form-checked" class="form__checkbox">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/slick.js"></script>
     <script>
-        $('.your-class').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
+        $(document).ready(function(){
+            $('.popup-btn').on('click', function(event){
+                event.preventDefault();
+                $('.popup').fadeIn();
+            });
+            $('.popup-close').on('click', function(event){
+                event.preventDefault();
+                $('.popup').fadeOut();
+            });
         });
     </script>
 </body>
